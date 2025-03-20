@@ -25,7 +25,7 @@
 
 ![Desktop View 1](./images/pc1.png)
 
-![Desktop View 1](./images/pc.png)
+![Desktop View 1](./images/pc2.png)
 
 #### Mobile View
 
