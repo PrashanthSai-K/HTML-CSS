@@ -1,0 +1,98 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins";
+    transition: all 0.5s ease;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+}
+
+nav > h2 {
+    padding-left: 2rem;
+}
+
+.dropdown-target {
+    display:none;
+    position: absolute;
+    top: 1rem;
+    padding: 1rem;
+    font-size: small;
+    width: 8rem;
+}
+
+.nav-item:hover {
+    scale: 1.05;
+}
+
+.dropdown:hover > .dropdown-target {
+    display: flex;
+    flex-direction: column;
+}
+
+.hamburger{
+    height: 2rem;
+    padding-right: 2rem;
+    display: none;
+}
+
+.navbar{
+    display: flex;
+    gap: 2rem;
+    padding-right: 2rem;
+}
+
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.dropdown-trigger > .dropdown-icon {
+    rotate: 90deg;
+}
+
+@media (max-width: 768px){
+
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        z-index: 1;
+    }
+
+    .dropdown:focus > .dropdown-target {
+        display: flex;
+        flex-direction: column;
+    }
+    .dropdown-target {
+        width: 8rem;
+        position: absolute;
+        top: -2rem;left: -10rem;
+        align-items: end;
+    }
+
+    .dropdown-trigger > .dropdown-icon {
+        rotate: 180deg;
+    }
+
+}
