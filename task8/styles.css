@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.title {
+    /* background-color: aqua; */
+    padding-bottom: 1rem;
+}
+
+.accordion-container {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(241, 241, 241);
+    display: grid;
+    place-items: center;
+    gap: 0;
+}
+
+.accordions {
+    /* background-color: aqua; */
+    width: 80%;
+    height: 23rem;
+}
+
+.accordion-label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.25rem;
+    border-radius: 0.5rem;
+    background: white;
+}
+
+.accordion-1-content,
+.accordion-2-content,
+.accordion-3-content {
+    height: 0rem;
+    opacity: 0;
+    width: 98%;
+    text-align: justify;
+    background-color: white;
+    border-radius: 1rem;
+    transition: height 1s ease;
+    pointer-events: none;
+    overflow-y: hidden;
+}
+
+#accordion-1:checked~.accordion-1-content,
+#accordion-2:checked~.accordion-2-content,
+#accordion-3:checked~.accordion-3-content {
+    height: 10rem;
+    opacity: 1;
+    padding: 1rem 0.5rem;
+    margin-bottom: 0.5rem;
+    pointer-events: all;
+}
+
+.label-1>.accordion-arrow,
+.label-2>.accordion-arrow,
+.label-3>.accordion-arrow {
+    rotate: 90deg;
+}
+
+#accordion-1:checked~.label-1>.accordion-arrow,
+#accordion-2:checked~.label-2>.accordion-arrow,
+#accordion-3:checked~.label-3>.accordion-arrow {
+    rotate: 270deg;
+}
+
+@media (max-width:768px) {
+
+    .accordion-1-content,
+    .accordion-2-content,
+    .accordion-3-content{
+        width: 96%;
+    }
+
+}
